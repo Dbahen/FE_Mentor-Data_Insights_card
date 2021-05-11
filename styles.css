@@ -6,47 +6,32 @@
 }
 html {
   background: hsl(233, 47%, 7%);
-
-  /* font-size: 62.5%; */
-}
-body {
 }
 h1 {
   color: hsl(0, 0%, 100%);
-  font-family: Inter;
   font-weight: 700;
-  text-align: center;
 }
 h1 span {
   color: hsl(277, 64%, 61%);
 }
 p {
-  padding: 20px 20px;
+  padding: 20px 0;
   color: hsla(0, 0%, 100%, 0.75);
-  font-family: "Inter", Arial, Helvetica, sans-serif;
   font-size: 15px;
-  text-align: center;
   line-height: 1.5em;
 }
 ul {
   color: hsla(0, 0%, 100%, 0.6);
-
   font-family: "Inter", Arial, Helvetica, sans-serif;
   font-size: 15px;
   list-style: none;
   text-align: center;
 }
-ul span {
-  font-family: "Lexend Deca";
-  font-weight: 700;
-  color: hsl(0, 0%, 100%);
-  margin-top: 20px;
-  margin-bottom: 5px;
-}
+
 .card {
   background: hsl(244, 38%, 16%);
   /* min-width: 320px; */
-  max-width: 280px;
+  width: 280px;
   margin: 60px auto;
   border-radius: 5px;
 }
@@ -57,12 +42,47 @@ ul span {
   width: 100%;
   filter: hsl(277, 64%, 61%);
 }
-
+.card-details {
+  font-family: "Inter", Arial, Helvetica;
+  padding: 30px 25px 0 25px;
+  text-align: center;
+}
 .card-bullets {
   display: flex;
   justify-content: center;
+  padding-bottom: 30px;
 }
 .card-bullets span {
   display: block;
   font-size: 2em;
+  font-family: "Lexend Deca";
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+@media only screen and (min-width: 375px) {
+  .card {
+    width: 75vw;
+    position: relative;
+  }
+  .card-image {
+    position: absolute;
+    width: 37.5vw;
+    height: auto;
+    right: 0px;
+  }
+  .card-details {
+    width: 37.5vw;
+    text-align: left;
+  }
+  .card-bullets {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .card-bullets li {
+    display: inline-block;
+    width: 10vw;
+  }
 }
